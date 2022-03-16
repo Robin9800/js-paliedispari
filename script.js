@@ -12,11 +12,17 @@ while(!word || word.length === 0){
 
 //Inverti la parola
 const invertedWord = invertWord(word);
+console.log(invertedWord);
 
 //Creo un ciclo che va da 0 alla lunghezza in caratteri della stringa
 function invertWord(parola){
+    let inverted= '';
+
     for(let i = 0; i < parola.length; i++){
         //Recupero il carattere all'interno della stringa alla posizione i
         const char = parola.charAt(i);
+        inverted = char + inverted;
     }
+    
+    return inverted;
 }
