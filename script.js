@@ -63,8 +63,19 @@ while(isNaN(numberUser) || numberUser > 5 || numberUser < 1){
     numberUser = parseInt(prompt('scegli un numero da 1 a 5'));
 }
 
-//Creo una funzione che mi genera un numero random da parte del pc
-const randomNumber = generatorRandomNumber(1, 5);
-function generatorRandomNumber(min, max){
+//Creo una funzione che genera un numero random da parte del pc
 
+//Sommiamo i due numeri
+const somma = sommaNumber(numberUser, randomNumber);
+const randomNumber = generatorRandomNumber(1, 5);
+
+function generatorRandomNumber(min, max){
+    const range = max - min + 1;
+    const number = Math.floor(Math.random()*range + min);
+    return number
+}
+
+//Funzione che somma i numeri.
+function sommaNumber(somma1, somma2){
+    return somma1 + somma2;
 }
