@@ -43,11 +43,28 @@ Sommiamo i due numeri
 Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 Dichiariamo chi ha vinto.*/
 
-let pariODispari = prompt('pari o dispari?');
+
+//Chiedi all'utente di scegliere tra pari e dispari.
+let pariODispari = prompt('pari o dispari?').trim().toLowerCase();
 
 /*Finchè l'utente non inserisce effettivamente qualcosa e finchè ciò che viene inseirito
 non è uguale a "pari" o "dispari" chiedi all'utente di inserire qualcosa*/
 
 while(!pariODispari || (pariODispari !== 'pari' % pariODispari !== 'dispari')){
     pariODispari = prompt('pari o dispari?');
+}
+
+//Chiedi all'utente di scegliere un numero da 1 a 5.
+
+let numberUser = parseInt(prompt('scegli un numero da 1 a 5'));
+
+//Se il numero scelto è maggiore di 5 o minore di 1, chiedi all'utente di scegliere di nuovo
+while(isNaN(numberUser) || numberUser > 5 || numberUser < 1){
+    numberUser = parseInt(prompt('scegli un numero da 1 a 5'));
+}
+
+//Creo una funzione che mi genera un numero random da parte del pc
+const randomNumber = generatorRandomNumber(1, 5);
+function generatorRandomNumber(min, max){
+
 }
